@@ -18,7 +18,8 @@
             padding: 0px;
             height: 100%;
         }
-        .row{
+
+        .row {
             height: 100%;
         }
 
@@ -33,12 +34,20 @@
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
-            min-height: 640px;
+            min-height: 200%;
         }
 
         #logo {
-            margin-top: 10%;
-            margin-left: 20%;
+            width: 100%;
+            float: left;
+            display: flex;
+            justify-content: center;
+            height: 90px;
+            margin-top: 40px;
+        }
+        #logo img{
+            width: 200px;
+            float: left;
         }
 
         .menu {
@@ -51,36 +60,99 @@
         .titulo {
             position: absolute;
             z-index: 1;
-            margin-left: 20%;
-            margin-top: 10%;
+            display: flex;
+            width: 100%;
+            margin-top: 175px;
+            justify-content: center;
+        }
+
+        .titulo h1 {
+            font-size: 3.8em;
+            text-transform: uppercase;
+            width: 100%;
+            float: left;
+            text-align: center;
+        }
+
+        .titulo span {
+            font-weight: 800;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .button-content{
+            width: 100%;
+            float: left;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            z-index: 10;
+            top: 340px;
+            bottom: 0;
+        }
+        .button-center{
+            width: 100%;
+            float: left;
+            text-align: center;
+        }
+        .button-center a{
+            font-size: 2.7em;
+            border-radius: 23px;
+            width: 26%;
+            background-color: #337ab77a;
+            border-color: #337ab77a;
+        }
+        .button-center a:hover{
+            background-color: #337ab7;
+            border-color: #337ab7;
+            transition: 0.3s;
+        }
+        /*responsivo*/
+        @media screen and (max-width: 1024px) {
+            .titulo h1{
+                font-size: 2.2em;
+            }
+            .button-content{
+                top: 280px;
+            }
+            .button-center a{
+                font-size: 2.2em;
+            }
+        }
+        @media screen and (max-width: 991px) {
+
         }
     </style>
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row">
-                <div class="titulo">
-                        <h1>cadastra-se na noTrouble e aumente suas vendas</h1>
-                    </div>
-            <div class="col-sm-4 side-left">
-                <div id="logo">
-                    <img src="assets/images/logo.png" alt="noTrouble Logo" width="180px">
-                </div>
-                <ul class="menu">
-                    <li>
-                        <a href="">Quem Somos</a>
-                    </li>
-                    <li>Pra Você</li>
-                    <li>App</li>
-                    <li>Duvidas</li>
-                </ul>
-            </div>
-            <div class="col-sm-8 side-right">   
+<div class="container-fluid">
+    <div class="row">
+        <div class="titulo">
+            <h1>cadastra-se na <span>noTrouble</span> <br>e aumente suas vendas</h1>
+        </div>
+        <div class="button-content">
+            <div class="button-center">
+                <a href="#" class="btn btn-primary">Assine Já</a>
             </div>
         </div>
+        <div class="col-md-4 side-left">
+            <div id="logo">
+                <img src="assets/images/logo.png" alt="noTrouble Logo" width="180px">
+            </div>
+            <ul class="menu">
+                <li>
+                    <a href="">Quem Somos</a>
+                </li>
+                <li>Pra Você</li>
+                <li>App</li>
+                <li>Duvidas</li>
+            </ul>
+        </div>
+        <div class="col-md-8 side-right">
+        </div>
     </div>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" />
+</div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"/>
 </body>
 
 </html>
